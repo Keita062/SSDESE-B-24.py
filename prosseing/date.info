@@ -1,1 +1,6 @@
-
+## データ読み込み
+from google.colab import drive
+drive.mount('/content/drive')
+import pandas as pd
+Trends_by_prefecture= pd.read_csv("/content/SSDSE-B-2024.csv", encoding='shift-jis',header=1)
+Trends_by_prefecture.head()
