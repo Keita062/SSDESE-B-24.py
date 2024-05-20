@@ -1,8 +1,8 @@
 # This Date set(データセットの種類)
 - SSDSE-B-2024
-   ## Reference Date
+   ## Reference Date(参照データ)
    [データセット](https://www.nstac.go.jp/sys/files/SSDSE-B-2024.csv)
-   ## Reference page
+   ## Reference page(参照ページ)
    [独立法人統計センター](https://www.nstac.go.jp/use/literacy/ssdse/#SSDSE-B)
 # Affiliation(所属)
 - [The Suganuma Seminar at Tama University](https://www.tama.ac.jp/faculty/seminar/smis/suganuma.html)
