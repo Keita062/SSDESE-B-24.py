@@ -1,6 +1,16 @@
-## データ読み込み
+#データ読み込み
 from google.colab import drive
 drive.mount('/content/drive')
 import pandas as pd
 Trends_by_prefecture= pd.read_csv("/content/SSDSE-B-2024.csv", encoding='shift-jis',header=1)
+#ページの確認
 Trends_by_prefecture.head()
+#基本統計量の測定
+Trends_by_prefecture.describe()
+#情報の確認
+Trends_by_prefecture.info()
+#カラムの確認
+list(Trns_by_prefeture.colmns)
+
+
+
