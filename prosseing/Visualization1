@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+# 都道府県別総人口の年度推移
+population_by_prefecture.plot(marker='o')
+plt.xlabel('年度')
+plt.ylabel('総人口')
+plt.title('都道府県別総人口の年度推移')
+plt.legend(title='都道府県')
+plt.grid(True)
+plt.show()
+# グループしたものが大きすぎて表示されなかった。=google Colaboratry
