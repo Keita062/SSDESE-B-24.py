@@ -1,8 +1,8 @@
 # This Date set(データセットの種類)
 - SSDSE-B-2024
-   ## Reference Date
+   ## Reference Date(参照データ)
    [データセット](https://www.nstac.go.jp/sys/files/SSDSE-B-2024.csv)
-   ## Reference page
+   ## Reference page(参照ページ)
    [独立法人統計センター](https://www.nstac.go.jp/use/literacy/ssdse/#SSDSE-B)
 # Affiliation(所属)
 - [The Suganuma Seminar at Tama University](https://www.tama.ac.jp/faculty/seminar/smis/suganuma.html)
@@ -24,10 +24,10 @@
 ![image](https://github.com/Keita062/SSDESE-B-24/assets/167952725/ec9c28ad-ff54-4b2c-89c7-3c1afceaef3c)
 
 # Table of contents(目次)
-- page1
-- page2
-- page3
-- page4
+- prossesing
+ - Date processing
+ - Visualization1
+ - date.info 
 # Commmitment(こだわり)
 # 関係レポート
 # persepecitive plan(展望計画)
