@@ -1,0 +1,9 @@
+#地域コードの列の削除
+Trends_by_prefecture2=Trends_by_prefecture.drop(columns='地域コード')
+Trends_by_prefecture2
+#各年度ごとの県別総人口表示
+population_by_prefecture = Trends_by_prefecture2.groupby(['年度','都道府県'])['総人口'].mean()
+population_by_prefecture
+#総人口の上位5県をグルーピング
+top5_prefectures_by_year = population_by_prefecture.groupby('年度').nlargest(5)
+top5_prefectures_by_year 
