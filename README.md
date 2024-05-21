@@ -24,11 +24,15 @@
 ![image](https://github.com/Keita062/SSDESE-B-24/assets/167952725/ec9c28ad-ff54-4b2c-89c7-3c1afceaef3c)
 
 # Table of contents(目次)
-- prossesing
+- ### prossesing
  - Date processing
+ - date.info
  - Visualization1
- - date.info 
+ - tohokudata.Under15 yearsold
+ - tohokudata.Under15 years.old visualization
+ - tohokudata. prediction.visualization
 # Commmitment(こだわり)
+
 # 関係レポート
 # persepecitive plan(展望計画)
 # 参考URL
