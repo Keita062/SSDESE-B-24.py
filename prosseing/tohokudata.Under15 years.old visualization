@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+# グラフのサイズを設定
+plt.figure(figsize=(12, 8))
+# 都道府県ごとにグループ化して折れ線グラフを描画
+for prefecture, group_data in result.groupby('都道府県'):
+    plt.plot(group_data['年度'], group_data['15歳未満人口'], label=prefecture)
+# グラフのタイトルと軸ラベルを設定
+plt.title('Annual change in the population under 15 years old by prefecture in the Tohoku region')
+plt.xlabel('year')
+plt.ylabel('Population under 15 years old')
+# 凡例を表示
+plt.legend()
+# グリッドを表示
+plt.grid(True)
+# グラフを表示
+plt.show()
