@@ -1,0 +1,57 @@
+import pandas as pd
+from statsmodels.tsa.arima.model import ARIMA
+
+# データの準備
+# tohoku_dataは既に年度と都道府県でグループ化されたデータを持っているとします
+# これに対応するデータをARIMAモデルに渡すために適切に変換する必要があります
+
+# 予測対象の年度
+target_years = [2022, 2023, 2024]
+
+# 各都道府県について予測を実行
+for pref in tohoku_data['都道府県'].unique():
+    # 対象の都道府県のデータを取得
+    pref_data = tohoku_data[tohoku_data['都道府県'] == pref]['15歳未満人口']
+    
+    # ARIMAモデルの構築と予測
+    model = ARIMA(pref_data, order=(1, 1, 1))  # 適切なパラメータを設定する必要があります
+    fit_model = model.fit()
+    forecast = fit_model.forecast(steps=len(target_years))  # 予測対象の年数分の予測を行う
+    
+    # 予測結果をデータフレームに追加
+    pref_forecast = pd.DataFrame({
+        '年度': target_years,
+        '都道府県': [pref] * len(target_years),
+        '15歳未満人口': forecast
+    })
+    future_population = pd.concat([future_population, pref_forecast])
+
+# 予測結果を表示
+print(future_population)
+
+  import matplotlib.pyplot as plt
+
+# グラフのサイズを設定
+plt.figure(figsize=(12, 8))
+
+# 都道府県ごとにグループ化して折れ線グラフを描画
+for prefecture, group_data in result.groupby('都道府県'):
+    plt.plot(group_data['年度'], group_data['15歳未満人口'], label=prefecture)
+
+# 予測データを追加
+for prefecture, group_data in future_population.groupby('都道府県'):
+    plt.plot(group_data['年度'], group_data['15歳未満人口'], linestyle='--', label=f"{prefecture} (forecast)")
+
+# グラフのタイトルと軸ラベルを設定
+plt.title('Annual change in the population under 15 years old by prefecture in the Tohoku region')
+plt.xlabel('year')
+plt.ylabel('Population under 15 years old')
+
+# 凡例を表示
+plt.legend()
+
+# グリッドを表示
+plt.grid(True)
+
+# グラフを表示
+plt.show()
