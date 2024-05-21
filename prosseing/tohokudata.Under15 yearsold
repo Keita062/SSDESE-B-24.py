@@ -1,0 +1,11 @@
+# 東北データとしてグルーピング
+tohoku_prefectures = ["青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県"]
+#　該当するものをグルーピング表示
+tohoku_data=Trends_by_prefecture2[Trends_by_prefecture2["都道府県"].isin(tohoku_prefectures)]
+# 年度、都道府県、15歳未満人口をグルーピングして平均を求める
+result = tohoku_data.groupby(["年度", "都道府県"])["15歳未満人口"].mean().reset_index()
+# 昇順にする
+result = result.sort_values(by=["年度", "15歳未満人口"])
+#　表示
+pd.set_option('display.max_rows', None)
+result
