@@ -1,10 +1,6 @@
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 
-# データの準備
-# tohoku_dataは既に年度と都道府県でグループ化されたデータを持っているとします
-# これに対応するデータをARIMAモデルに渡すために適切に変換する必要があります
-
 # 予測対象の年度
 target_years = [2022, 2023, 2024]
 
