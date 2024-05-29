@@ -25,13 +25,15 @@
 
 # Table of contents(目次)
 - ### prossesing
- - Date processing
+ - Date processing1
  - date.info
  - Visualization1
  - tohokudata.Under15 yearsold
  - tohokudata.Under15 years.old visualization
  - tohokudata. prediction.visualization
+ - Oter.prefecture.definiton
 # Commmitment(こだわり)
+
 
 # 関係レポート
 # persepecitive plan(展望計画)
