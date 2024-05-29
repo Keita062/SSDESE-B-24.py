@@ -32,12 +32,13 @@
  - tohokudata.Under15 years.old visualization
  - tohokudata. prediction.visualization
  - Oter.prefecture.definiton
-# Commmitment(こだわり)
-
-
 # 関係レポート
+[作成中...。]([https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit](https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit?usp=sharing))
+
 # persepecitive plan(展望計画)
+今現在(5/29)はデータ前処理、データの可視化、取得データの分析、データの可視化まで行いました。
+データの予測(機械学習)をこれから深く学習する。そのためにこの教育データセットを活用していく。
 # 参考URL
 - https://www.nstac.go.jp/sys/files/kaisetsu-C-2024.pdf
 - https://www.nstac.go.jp/use/literacy/ssdse/#SSDSE-B
-- 
+
