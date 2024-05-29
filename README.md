@@ -33,7 +33,7 @@
  - tohokudata. prediction.visualization
  - Oter.prefecture.definiton
 # 関係レポート
-[作成中...。]([https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit](https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit?usp=sharing))
+[作成中...。](https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit](https://docs.google.com/document/d/1jN_hOEj_VGz4sjl6RgYZW_GI-cKabAQIf9Hoh-5Zo3c/edit?usp=sharing)
 
 # persepecitive plan(展望計画)
 今現在(5/29)はデータ前処理、データの可視化、取得データの分析、データの可視化まで行いました。
