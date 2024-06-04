@@ -1,4 +1,4 @@
-kanto_prefectures = ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都"]
+kanto_prefectures = ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都","神奈川県"]
 kanto_data=Trends_by_prefecture2[Trends_by_prefecture2["都道府県"].isin(kanto_prefectures)]
 result1 = kanto_data.groupby(["年度", "都道府県"])["15歳未満人口"].mean().reset_index()
 result1 = result.sort_values(by=["年度", "15歳未満人口"])
