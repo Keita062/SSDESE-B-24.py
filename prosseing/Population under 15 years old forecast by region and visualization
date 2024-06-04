@@ -1,0 +1,37 @@
+from statsmodels.tsa.arima.model import ARIMA
+
+def forecast_population(region_data, prefectures, region_name):
+    region_data = region_data[region_data["都道府県"].isin(prefectures)]
+    region_data = region_data.groupby(["年度"])["15歳未満人口"].sum().reset_index()
+    region_data = region_data.sort_values(by=["年度"])
+
+    # ARIMAモデルによる予測
+    model = ARIMA(region_data["15歳未満人口"], order=(1, 1, 1))
+    model_fit = model.fit()
+    forecast = model_fit.forecast(steps=10)
+
+    # 結果の表示
+    plt.figure(figsize=(10, 6))
+    plt.plot(region_data["年度"], region_data["15歳未満人口"], label='Actual')
+    plt.plot(range(region_data["年度"].iloc[-1] + 1, region_data["年度"].iloc[-1] + 11), forecast, label='Forecast')
+    plt.title(f'{region_name} 地方の15歳未満人口予測')
+    plt.xlabel('年度')
+    plt.ylabel('15歳未満人口')
+    plt.legend()
+    plt.show()
+
+    return forecast
+
+# 各地方の予測
+kanto_prefectures = ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都","神奈川県"]
+tyubu_prefectures = ["新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県","岐阜県","静岡県","愛知県"]
+kansai_prefectures = ["三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県","和歌山県"]
+sikoku_prefectures = ["徳島県", "香川県", "愛媛県", "高知県"]
+kyuoki_prefectures = ["福岡県", "佐賀県", "長崎県", "大分県", "宮崎県", "鹿児島県","沖縄県"]
+
+# 関数を使って予測を実行
+kanto_forecast = forecast_population(Trends_by_prefecture2, kanto_prefectures, '関東')
+tyubu_forecast = forecast_population(Trends_by_prefecture2, tyubu_prefectures, '中部')
+kansai_forecast = forecast_population(Trends_by_prefecture2, kansai_prefectures, '関西')
+sikoku_forecast = forecast_population(Trends_by_prefecture2, sikoku_prefectures, '四国')
+kyuoki_forecast = forecast_population(Trends_by_prefecture2, kyuoki_prefectures, '九州・沖縄')
